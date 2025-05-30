@@ -5,10 +5,10 @@ void main() {
   try {
     runApp(const MemoryMatchApp());
   } catch (e) {
-    print('Error starting app: $e');
+    debugPrint('Error starting app: $e');
     // Gracefully handle errors in headless environments
     if (e.toString().contains('cannot open display')) {
-      print('App requires a display to run. This appears to be a headless environment.');
+      debugPrint('App requires a display to run. This appears to be a headless environment.');
     }
   }
 }

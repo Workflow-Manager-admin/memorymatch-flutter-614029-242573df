@@ -21,7 +21,7 @@ class MemoryCardWidget extends StatelessWidget {
         transform: Matrix4.rotationY(card.isFlipped ? 3.14 : 0),
         child: Card(
           color: card.isMatched
-              ? Colors.green.withOpacity(0.3)
+              ? Colors.green.withAlpha(76) // 0.3 * 255 ≈ 76
               : card.isFlipped
                   ? const Color(0xFF1976D2)
                   : Colors.white,
