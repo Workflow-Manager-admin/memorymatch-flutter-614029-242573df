@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'memory_card.dart';
 
 enum GameDifficulty {

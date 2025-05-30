@@ -34,7 +34,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
   }
 
   void initializeGame() {
-    final cards = _generateCards(gameState?.difficulty ?? GameDifficulty.easy);
+    final difficulty = gameState.difficulty;
+    final cards = _generateCards(difficulty);
     setState(() {
       gameState = GameState(cards: cards);
       flippedCardIndexes = [];
