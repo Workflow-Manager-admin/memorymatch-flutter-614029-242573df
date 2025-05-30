@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'screens/memory_game_screen.dart';
 
 void main() {
-  runApp(const MemoryMatchApp());
+  try {
+    runApp(const MemoryMatchApp());
+  } catch (e) {
+    print('Error starting app: $e');
+    // Gracefully handle errors in headless environments
+    if (e.toString().contains('cannot open display')) {
+      print('App requires a display to run. This appears to be a headless environment.');
+    }
+  }
 }
 
 class MemoryMatchApp extends StatelessWidget {

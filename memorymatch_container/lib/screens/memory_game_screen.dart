@@ -14,7 +14,10 @@ class MemoryGameScreen extends StatefulWidget {
 }
 
 class _MemoryGameScreenState extends State<MemoryGameScreen> {
-  late GameState gameState;
+  late GameState gameState = GameState(
+    cards: _generateCards(GameDifficulty.easy),
+    difficulty: GameDifficulty.easy,
+  );
   Timer? gameTimer;
   List<int> flippedCardIndexes = [];
 
